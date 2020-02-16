@@ -1,5 +1,6 @@
 function hello() {
     let variable = "hello"
+    alert("Hello world webpack nice ")
     return variable
 }
 

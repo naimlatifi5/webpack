@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config config/webpack.dev.js"
+    "build": "webpack --config config/webpack.dev.js",
+    "start": "webpack-dev-server --config config/webpack.dev.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://naimlatifi5:prishtina2019@github.com/naimlatifi5/webpack.git.git"
+    "url": "git+https://github.com/naimlatifi5/webpack.git.git"
   },
   "author": "Naim Latifi",
   "license": "ISC",
@@ -20,12 +21,15 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "postcss-loader": "^3.0.0",
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
