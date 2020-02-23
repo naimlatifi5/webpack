@@ -8,11 +8,11 @@ body {
     text-align: center;
 }
 .main {
-    background-color: grey;
+    background-color: red;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 500px;
-    
+    background-image: url('../images/nature.jpg');
 }
