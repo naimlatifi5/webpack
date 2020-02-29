@@ -2,22 +2,25 @@ const path = require("path") // path used to work with directories
 // plugin to extract all css files in a seperate file
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // main object to tell webpack what to do with configuration options
 module.exports = {
     entry: {
         // we write main entry point where webpack to start
-        index: "./src/index.js"
+        app: "./src/index.js",
+        print: "./src/print.js"
     },
     // default mode for webpack is production 
     // we are in development mode so let's set mode to development
     mode: "development",
     // path and filename for the bundle
     output: {
-      filename: "bundle.js",
+      filename: '[name].bundle.js',
+      //filename: "bundle.js",
       path: path.resolve(__dirname, "../dist")
     },
-
+    devtool: 'inline-source-map',
     // webpack loaders
     module: {
         rules: [
@@ -88,8 +91,9 @@ module.exports = {
         ]
     },
     plugins: [
+      new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        title: 'Setting up webpack 4',
+        title: 'Output management',
         template: './index.html',
         inject: true,
         minify: {
