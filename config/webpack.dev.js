@@ -9,7 +9,8 @@ module.exports = {
     entry: {
         // we write main entry point where webpack to start
         app: "./src/index.js",
-        print: "./src/print.js"
+       // print: "./src/print.js",
+        //anotherModule: "./src/another-module.js"
     },
     // default mode for webpack is production 
     // we are in development mode so let's set mode to development
@@ -18,8 +19,14 @@ module.exports = {
     output: {
       filename: '[name].bundle.js',
       //filename: "bundle.js",
+      chunkFilename: '[name].bundle.js',
       path: path.resolve(__dirname, "../dist")
     },
+    // optimization: {
+    //   splitChunks: {
+    //     chunks: 'all'
+    //   }
+    // },
     devtool: 'inline-source-map',
     // webpack loaders
     module: {

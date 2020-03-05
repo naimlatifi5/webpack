@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config config/webpack.dev.js",
-    "dev": "webpack-dev-server --config  config/webpack.dev.js"
+    "dev": "webpack-dev-server --config  config/webpack.dev.js",
+    "analysis": "webpack --profile --json > stats.json"
   },
   "repository": {
     "type": "git",
@@ -35,5 +36,8 @@
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
   }
 }
