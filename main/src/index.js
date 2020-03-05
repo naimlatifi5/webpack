@@ -1,8 +1,8 @@
-import { hello, square,arrowFunction} from "./js/util.js"
+import { hello, square,arrowFunction} from "./js/util.js.js"
 //import _ from 'lodash';
 // now webpack needs to know what to do
-import '../src/scss/index.scss'
-import printMe from './print.js'
+//import '../src/scss/index.scss'
+import printMe from './print.js.js'
 
 console.log("this is my first code in webpack nice with webpack")
 console.log(hello())
