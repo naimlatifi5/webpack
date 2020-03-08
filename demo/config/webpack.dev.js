@@ -4,7 +4,7 @@ const path = require('path')
 // webpack's main configuration object
 module.exports = {
     // entry point where webpack will begin his work
-    entry: "./src/main.js",
+    entry: "./src/index.js",
 
     // result bundle output
     output: {
