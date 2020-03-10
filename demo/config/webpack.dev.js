@@ -13,5 +13,31 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: "[name].bundle.js"
+    },
+    module: {
+        rules: [
+            {
+              // Regex: Apply rule for .sass, .scss or .css files
+              test: /\.(sa|sc|c)ss$/,
+               
+                use: [
+                    {
+                        // Inject CSS into DOM
+                        loader: "style-loader",
+                    },
+                    {
+                       // This loader resolves url() and @imports inside CSS
+                        loader: "css-loader",
+                    },
+                     //Loads a Sass/SCSS file and compiles it to CSS.
+                    {
+                        // sass -loader
+                        loader: "sass-loader"
+                    }
+                 
+                ]
+            },
+           
+        ]
     }
 }

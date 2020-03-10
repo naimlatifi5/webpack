@@ -55,7 +55,7 @@ module.exports = {
               use: [
                   
                       {
-                        // This loader resolves url() and @imports inside CSS
+                        // Inject CSS into DOM
                         loader: "style-loader",
                       },
                       {

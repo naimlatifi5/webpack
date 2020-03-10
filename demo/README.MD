@@ -1,6 +1,4 @@
-  2. 
-   -Added entry points 
-   - Tested with multiple entry points as entry object 
-   - added lodash dependency
-   - We add an index.html directly to dist map  and link our created bundle to see the result on browser
-   - We see the result in the console
+  3. We try to import an index.scss file inside javascript, webpack shows that you need an appropriate loader to handle this fyle type
+  - we then install css loader , style loader and sass loader
+  - added box inside html and applied styling
+  -
