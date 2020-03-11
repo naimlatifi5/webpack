@@ -1,4 +1,4 @@
-  3. We try to import an index.scss file inside javascript, webpack shows that you need an appropriate loader to handle this fyle type
-  - we then install css loader , style loader and sass loader
-  - added box inside html and applied styling
-  -
+4. 
+ - Now instead of going through dist map and open index.html we want with help of plugins to have an index.html inside src and generate it into dist
+ - copied index.html inside src
+ - installed html-webpack-plugin

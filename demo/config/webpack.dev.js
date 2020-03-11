@@ -1,6 +1,7 @@
 // this is our magic file
 const path = require('path')
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // webpack's main configuration object
 module.exports = {
     // entry point where webpack will begin his work
@@ -39,5 +40,16 @@ module.exports = {
             },
            
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Output management',
+            template: './index.html',
+            inject: true,
+            minify: {
+              removeComments: true,
+              collapseWhitespace: true
+            },
+          })
+    ]
 }
