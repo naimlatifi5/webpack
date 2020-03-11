@@ -38,6 +38,20 @@ module.exports = {
                  
                 ]
             },
+            {
+                // test is a javascript regular expression for file extension we are going to transform
+                test: /\.js$/,
+                // which path should be ignored when transformin modules, we won't transform imported vendor libraries
+                exclude: /(node_modules)/, 
+                // here we set loaders for our test regular expression
+                use: {
+                    loader: "babel-loader",
+                    // In this case we set default presets for Babel to consider which ES6 features it should transform and which not
+                    options: {
+                        presets: ['@babel/preset-env'] // babel loader for traspiler javascript code
+                    }
+                }
+              },
            
         ]
     },
