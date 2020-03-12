@@ -2,12 +2,19 @@
 const path = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const MiniCssExtractPlugin = require
+('mini-css-extract-plugin');
+
+// cleaning dist folder with clean plugin webpack
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 // webpack's main configuration object
 module.exports = {
     // entry point where webpack will begin his work
     entry: {
         app1: "./src/index.js",
-        app2: "./src/main.js",
+        app2: "./src/main.js"
     },
 
     // result bundle output
@@ -17,19 +24,21 @@ module.exports = {
     },
     module: {
         rules: [
+         
             {
               // Regex: Apply rule for .sass, .scss or .css files
               test: /\.(sa|sc|c)ss$/,
                
                 use: [
+                  
                     {
                         // Inject CSS into DOM
                         loader: "style-loader",
                     },
-                    {
-                       // This loader resolves url() and @imports inside CSS
-                        loader: "css-loader",
-                    },
+                    
+                    MiniCssExtractPlugin.loader, 
+                    "css-loader",
+                     
                      //Loads a Sass/SCSS file and compiles it to CSS.
                     {
                         // sass -loader
@@ -64,6 +73,8 @@ module.exports = {
               removeComments: true,
               collapseWhitespace: true
             },
-          })
+          }),
+        new MiniCssExtractPlugin(),
+        new CleanWebpackPlugin()
     ]
 }
