@@ -1,7 +1,8 @@
-4. 
- - Now instead of going through dist map and open index.html we want with help of plugins to have an index.html inside src and generate it into dist
- - copied index.html inside src
- - installed html-webpack-plugin
--  installed mini-css-extract-plugin to extract css in a seperate file
-- We added minicssExtracPlugin that will take the styling css or scss imported inside a js file and extract to a css file and add import inside html file into the head element as stylesheet
--  We installed plugin for clean dist foler, for testing we added another entry point called project.js and then instatitate a new instance of CleanWebpackPlugin()
+5. Installed webpack merge to merge the common file webpack
+- Created two more files webpack.common and webpack.production and seperated the code 
+- Merge webpack.common to use dev and prod
+- Modified package json to use build for production and start for development
+- When running build we will see that the code is minified automatically in production mode
+- Added inline-source-map to see where the error occurres on the file. 
+
+  
