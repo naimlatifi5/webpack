@@ -1,8 +1,5 @@
-6.
-  - Added webpack dev server
-  - Configured in the package json to run dev server
-  - added devServer to dev config to see for changes in dist
-  - added an error to a file and then see the differences with source map and without source map and changed the mode to production to see the differences that the error shows in bundle  app1.bundle instead of file itself
-  
-
+7. - Added lodash to main.js with an array concatination
+   - Build the app with yarn build and opened both app1 and app2 bundle to see that we got the Lodash library in both files which is a problemt and where code splitting will fix it.
+   - Added optimization for webpack chunks all and after running build we see that new vendor bundle is created that contains and share loadsh to the file lodash is used
+   - 
   

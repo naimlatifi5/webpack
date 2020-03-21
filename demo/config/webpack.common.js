@@ -11,18 +11,42 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // webpack's main configuration object
 module.exports = {
-    // mode: "development",
+
     // entry point where webpack will begin his work
+
+    //prevent duplicaiton with dependOn entry dependencies
+
+    // entry: {
+    //     app1: { 
+    //         import: "./src/index.js",
+    //         dependOn: 'shared'
+    //     },
+    //     app2: { 
+    //         import: "./src/main.js",
+    //         dependOn: 'shared'
+    //     },
+    //     shared: 'lodash'
+    // },
+
+    // using SplitChunksPlugin
+
     entry: {
         app1: "./src/index.js",
         app2: "./src/main.js"
     },
-
+    
     // result bundle output
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: "[name].bundle.js"
     },
+
+    optimization: {
+        splitChunks: {
+            chunks: "all"
+        }
+    },
+
     module: {
         rules: [
          
