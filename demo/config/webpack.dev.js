@@ -7,6 +7,7 @@ const common = require('./webpack.common.js')
 
 module.exports = merge(common, {
     mode: 'development',
+    // see error on the file
     devtool: 'inline-source-map',
      // hot reloading
     
