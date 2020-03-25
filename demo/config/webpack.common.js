@@ -9,6 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // cleaning dist folder with clean plugin webpack
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const webpack = require('webpack')
 // webpack's main configuration object
 module.exports = {
 
@@ -100,6 +101,7 @@ module.exports = {
             },
           }),
         new MiniCssExtractPlugin(),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }

@@ -13,6 +13,8 @@ module.exports = merge(common, {
     
      devServer: {
         // look for the file changes in dist
-        contentBase: './dist'
+        contentBase: './dist',
+        hot: true
+
       }
 })
